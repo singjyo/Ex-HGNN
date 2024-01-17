@@ -1,0 +1,20 @@
+node_types: ['author','paper','conference']
+edge_types: ['author_paper','paper_author','paper_conference','conference_paper']
+node_acronyms:  {'author':'A','paper':'P','conference':'C'}
+adjacency_list_info_path: '../data/adjacency_list_info.json'
+edge_info_path : '../data/edge_info_dblp.json'
+node_textual_attribute_mapping: '../data/node_textual_attribute_mapping.json'
+edge_relations_with_example_mapping: '../data/edge_relations_with_example_mapping.json'
+# only needed for scoring #
+target_categories_mapping : '../data/target_to_categories_mapping.json'
+train_gtn: False
+gtn_model_path : '../gtn_output/dblp_gtn.pt'
+model_keys: ['layers.0.conv1.weight','layers.0.conv2.weight','layers.1.conv1.weight','layers.2.conv1.weight','layers.3.conv1.weight']
+target_node_type: 'author'
+top_metapath_needed: 2
+bedrock_llm: anthropic.claude-v2:1
+task_description:
+output_path: '../data_output/'
+
+
+
