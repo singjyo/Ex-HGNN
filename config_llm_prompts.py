@@ -75,7 +75,8 @@ Assistant: Thanks for providing the task-description and relevant context. Do yo
 Human: Provide the methodology to get the prediction for the label of the node. Enclose the methodology in xml tags <methodology>,</methodology>. This is just the space for your notes and not meant to be shown to the user.
 Get the prediction of the label of the node, enclose the prediction in xml tags. <prediction>,</prediction>
 Get the explanation behind the prediction for the label of the node. Enclose it in xml tags <explanation>,</explanation>
- 
+
+# think in terms of steps to get the prediction of the node, and mention your steps in <explanation></explanation>
  
 Assistant:
 ''',
@@ -126,6 +127,7 @@ Human: Get the explanation behind the prediction for the label of the node. Encl
 Assistant:
 '''
 }
+
 
 GEN_HYPERPARAMETERS = {
 'amazon.titan-tg1-large': {"maxTokenCount": 1600,

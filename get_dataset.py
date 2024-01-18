@@ -16,8 +16,11 @@ def read_data(args):
 
     with open(args.metapath_summarization_example,'r') as f:
        metapath_summarization_example=json.load(f)
+
+    with open(args.target_categories_mapping,'r') as f:
+       target_categories=json.load(f)
     
-    return adjacency_list_info,edge_info,node_textual_attribute,edge_relations_with_example_mapping,metapath_summarization_example
+    return adjacency_list_info,edge_info,node_textual_attribute,edge_relations_with_example_mapping,metapath_summarization_example,target_categories
 
 
     

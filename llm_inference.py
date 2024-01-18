@@ -39,7 +39,7 @@ def chain_metapath_summary(args,response_chain_graph_summary,edge_relations_with
     return metapath_meanings_dict
 
 
-def chain_explanation_prediction_summary(args,response_chain_prediction_explanation,meta_path_context_dict):
+def chain_explanation_prediction(args,response_chain_prediction_explanation,meta_path_context_dict):
     
     for key in meta_path_context_dict:
         if len(meta_path_context_dict[key]['context']):
