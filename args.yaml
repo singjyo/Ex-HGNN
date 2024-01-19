@@ -17,4 +17,14 @@ task_description:
 output_path: '../data_output/'
 
 
+# sample edge_relations_with_example_mapping #
+
+'''
+{'author_paper': 'AP (A stands for author named as xyz, P stands for paper named as abc) : Author xyz has published a paper titled abc',
+ 'paper_author': 'PA (P stands for paper named as abc, A stands for author named as xyz):  Paper abc has been published by an author xyz',
+ 'paper_conference': 'PC (P stands for paper named as abc,C stands for conference named as def) :  Paper abc has been published in conference titled as def',
+ 'conference_paper': 'CP (C stands for conference named def, P stands for paper named as ghi) : Conference DEF has paper titled ABC in its list of publications'}
+ '''
+
+
 
