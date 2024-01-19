@@ -126,3 +126,46 @@ CONTEXT_LENGTH = {
     'anthropic.claude-v2:1':100000,
 }
 
+# sample input summarize_meta_path_v2 #
+'''
+Human:You are a human whose goal is to generate the meaning of different meta-paths in heterogeneous graph network. You are provided with all the node types and edge-type and the underlying relation between them.  
+
+Please find the node types enclosed inside the xml tags <node-type>,</node-type>
+<node-type>A: Author
+P:Paper
+C:Conference</node-type>
+
+Edge-type and their underlying relation is enclosed between xml tags <edge-relation>,</edge-relation>
+<edge-relation>AP (A stands for xyz, P stands for abc) : Author xyz has published a paper titled abc
+PA (P stands for abc, A stands for xyz):  Paper abc has been published by an author xyz
+PC (P stands for abc,C stands for def) :  Paper abc has been published in conference titled as def
+CP (C stands for def, P stands for ghi) : Conference DEF has paper titled ABC in its list of publications.</edge-relation>
+
+Please find one meta-path summarization example below:
+APA (A stands for xyz, P stands for abc, A’ def) : Author xyz has published a paper abc together with def
+
+Can you generate the meaning of the following meta-paths enclosed inside xml tags <meta-path>,</meta-path>
+<meta-path>APCP’A’ (A stands for xyz,P stands for abc, C stands for def, P’ stands for ghi,A’ stands for jkl)
+APCP (A stands for xyz, P stands for abc, C stands for mno, P’ stands for pqr)</meta-path>
+
+Write the meaning inside xml tags <meaning> </meaning>?
+
+Assistant:
+'''
+
+# sample output summarize_meta_path_v2 #
+'''
+Certainly! I'll generate the meanings of the specified meta-paths in your heterogeneous graph network, adhering to the node and edge types you've provided.
+
+1. Meta-Path: APCP’A’ (A stands for xyz, P stands for abc, C stands for def, P’ stands for ghi, A’ stands for jkl)
+
+   Meaning:
+   `<meaning>Author xyz has published a paper titled abc, which has been presented at conference def. This conference also has a paper titled ghi, authored by jkl.</meaning>`
+
+2. Meta-Path: APCP (A stands for xyz, P stands for abc, C stands for mno, P’ stands for pqr)
+
+   Meaning:
+   `<meaning>Author xyz has published a paper titled abc, which has been presented at conference mno. This conference also has a paper titled pqr.</meaning>`
+'''
+
+
